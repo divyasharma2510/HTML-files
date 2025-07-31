@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+    <title>Calculator</title>
+    <style>
+        .container{
+            width: 600px;
+            height: 300px;
+            background-color: rgb(182, 182, 241);
+            max-width: 500px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #aaa;
+
+        }
+        button{
+            padding: 10px;
+            background-color: white;
+            color: blue;
+            font-size: 16px;
+            border:none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+    </style>
+        <body>
+            <div class="container">
+                <button type="submit" onclick="">9</button>
+                <button type="submit" onclick="">8</button>
+                <button type="submit" onclick="">7</button><br><br>
+                <button type="submit" onclick="">6</button>
+                <button type="submit" onclick="">5</button>
+                <button type="submit" onclick="">4</button><br><br>
+                <button type="submit" onclick="">3</button>
+                <button type="submit" onclick="">2</button>
+                <button type="submit" onclick="">1</button><br><br>
+                <button type="submit" onclick="">0</button>
+                <button type="submit" onclick="">DEL</button>
+                <button type="submit" onclick="">C</button><br><br>
+                <button type="submit" onclick="">=</button>
+            </div>
+        </body>
+        <script>
+            const display = document.getElementById('dispaly');
+            const buttons = document.querySelectorAll('.button');
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const val = button.getAttribute('data-value');
+                    if(button.id === 'clear'){
+                        display.val = '';
+                    }
+                    else if(button.id === 'delete'){
+                        display.val =display.val.slice(0,-1);
+                    }
+                    else if(button.id === 'equals'){
+                        try{
+                            display.val = eval(display.value) || '';
+                        }
+                        catch{
+                            display.val="Error";
+                        }
+                    }
+                    else{
+                        display.val += val;
+                    }
+                });
+            });
+        </script>
+</head>

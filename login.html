@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="images/collegeicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+      
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 20px;
+            background-color: #82d7ef;
+            background-image: url('images/bgimgs.jpg');
+            opacity: 1px;
+        }
+        h1{
+            color: blue;
+        }
+        a{
+            
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        p{
+            line-height: 1.5;
+        }
+        
+        q{
+            quotes: """ """ "'" "'";
+        }
+        q::before{
+            content: open-quote;
+        }
+        q::after{
+            content: close-qoute;
+        }
+    </style>
+    
+    <title>College Login</title>
+    <body>
+        <div style="text-align: center;">
+        <img src="https://www.mallareddyecw.com/assets/mallareddy-college-logo.png" width="1200" height="100">
+        <br><br><br>
+        <img src="images/principal.png" width="400px" height="400px" align="border-left">
+        <br>
+    
+        </div>
+        <h1 style="font-size: 25px;"><i><u style="color: black;">VISION</u></i></h1>
+        <ul>
+            <li style="font-size: 18px;">Visualizing a great future for the intelligents by imparting state-of the art Technologies 
+                in the field of Engineering and Technology for the bright future and prosperity of the students.</li>
+            <li style="font-size: 18px;">To offer world className training to the promising Engineers.</li>
+        </ul>
+        <h1 style="font-size: 25px;"><i><u style="color: black;">MISSION</u></i></h1>
+        <ul>
+            <li style="font-size: 18px;">To nurture high level of Decency, Dignity and Discipline in women to attain high intellectual abilities.</li>
+            <li style="font-size: 18px;">To produce employable students at National and International levels by effective training programmes.</li>
+            <li style="font-size: 18px;">To create pleasant academic environment for generating high level learning attitudes.</li>
+        </ul>
+        <br>
+        <h1>Login into your Account</h1>
+        
+        <div>
+            <form>
+                <label style="font-size: 20px;">Login</label>
+                <select id="Login" name="Login" required>
+                    <option value="01">Student</option>
+                    <option value="02">Faculty</option>
+                </select>
+                <br><br>
+                <label style="font-size: 20px">Branches</label>
+            <select id="Branches" name="Branches" required>
+                <option value="01">CSE</option>
+                <option value="02">AIML</option>
+                <option value="03">CSE</option>
+                <option value="04">DS</option>
+                <option value="05">CS</option>
+                <option value="06">IT</option>
+                <option value="07">IOT</option>
+                <option value="08">CSIT</option>
+                <option value="09">ECE</option>
+                <option value="10">EEE</option>
+            </select>
+            <br>
+            <br>
+            <label style="font-size: 20px;">Enter your Name:</label>
+                <input type="text" name="username" placeholder="enter username"><br><br>
+            <label style="font-size: 20px;">Enter your password:</label>
+                <input type="text" name="password" placeholder="enter password"><br><br>
+                <button type="submit">Login</button>
+                <p style="font-size: 20px;"><a href="signup.html">Login</a></p>
+            </form>
+        </div>
+        <p style="font-size: 20px;">Don't have an account?<a href="new_acct.html">Click Here</a></p><br><br><br>
+        <p style="font-size: 25px;"><a href="about.html">About</a></p>
+        <p style="font-size: 25px;"><a href="contact.html">Contact</a></p>
+    </body>
+    </head>
+</html>

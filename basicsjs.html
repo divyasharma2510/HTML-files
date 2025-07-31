@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+    <title></title>
+    <body>
+
+    </body>
+    <script>
+        const myVar=100; //unique value we can't modify its value
+            var vvv="hello world!";
+            vvv="hello";
+            let mylet="welcome to Javascript";
+            mylet="welcome";
+            console.log(myVar);
+            console.log(vvv);
+            console.log(mylet);
+
+            /*var v=100;
+            if(v<20){
+                console.log("True");
+            }
+            else{
+                console.log("False");
+            }
+            switch(v){
+                case 100: 
+                document.writeln("Value 1: Deposited 100 ");
+                document.write("Value 1: Deposited 100 ");
+                window.alert("Value 1: Deposited 100 ");
+                console.log("500");
+                break;
+
+                case 200: console.log("100");
+                break;
+
+                case 300: console.log("100");
+                break;
+
+            }*/
+           //Write a program javascript prgm to verify the conditions using if with nested if concept
+           let val1=10;
+           let val2=20.10;
+           let val3="Hello World";
+           let val4=true;
+           let val5=null;
+           let val6=undefined;
+           let val7=Symbol("mySymbol");
+           let val8={name:"Uday", age:"20"};
+           let val9=[1,2,3,4,5];
+           let val10=BigInt(1234567890123456789n);
+           let val11=function() {return "I am a function";};
+           let val12=new Date();
+           let val13=/abc/;
+           let val14=new Map();
+           document.writeln("<br>my var1: "+typeof val1);
+           document.writeln("<br>my var1: "+val1);
+           document.writeln("<br>my var2: "+typeof val2);
+           document.writeln("<br>my var2: "+val2);
+           document.writeln("<br>my var3: "+typeof val3);
+           document.writeln("<br>my var3: "+val3);
+           document.writeln("<br>my var4: "+typeof val4);
+           document.writeln("<br>my var4: "+val4);
+           document.writeln("<br>my var5: "+typeof val5);
+           document.writeln("<br>my var5: "+val5);
+           document.writeln("<br>my var6: "+typeof val6);
+           document.writeln("<br>my var6: "+val6);
+           document.writeln("<br>my var7: "+typeof val7);
+           document.writeln("<br>my var7: "+val7.toString());
+           document.writeln("<br>my var8: "+typeof val8);
+           document.writeln("<br>my var8: "+val8);
+           document.writeln("<br>my var9: "+typeof val9);
+           document.writeln("<br>my var9: "+val9);
+           document.writeln("<br>my var10: "+typeof val10);
+           document.writeln("<br>my var10: "+val10);
+           document.writeln("<br>my var11: "+typeof val11);
+           document.writeln("<br>my var11: "+val11());
+           document.writeln("<br>my var12: "+typeof val12);
+           document.writeln("<br>my var12: "+val12);
+           document.writeln("<br>my var13: "+typeof val13);
+           document.writeln("<br>my var13: "+val13);
+           document.writeln("<br>my var14: "+typeof val14);
+           document.writeln("<br>my var14: "+val14.set("key1","value1"));
+           document.writeln("<br>my var14 val:"+val14.get("key1")+"<br><br>");
+           
+           let v=0;
+           for(let i=0;i<val9.length;i++){
+            v+=val9[i];
+            document.writeln("Val of i " +i+"<br>");
+            document.writeln("Val of v "+v+"<br>");
+           }
+           for(let i in val9){
+            document.writeln("Value at index: "+val9[i]+"<br><br>");
+           }
+    </script>
+</head>

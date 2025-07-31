@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<head>
+    <title>Main JavaScript</title>
+    <boby>
+        <h1>This is a Demo Program</h1>
+        <p>Here it is a paragrapgh</p>
+        <p id="myId1"></p>
+        <p id="myId2"></p>
+        <label for="myInput">Type Something:</label>
+        <input type="text" id="myInput" onchange="changeEvent()">
+        <p id="myid"></p>
+        <script>
+            function loadMainJavascript(){
+                document.writeln("<h2>Laoding main javascript</h2><br><br>");
+                document.getElementById("myId1").innerHTML="Loading main JavaScript file...";
+                console.log("Loading main JavaScript file...");
+            }
+            loadMainJavascript();
+
+            function JavaScript(v1,v2,v3,v4){
+                let myfuncvalue = v1*v2*v3*v4;
+                document.getElementById("myId2").innerHTML = "Multiply values: "+myfuncvalue;
+            }
+            let v1=10;
+            let v2=20;
+            let v3=30;
+            let v4=40;
+            JavaScript(v1,v2,v3,v4);
+
+            function changeEvent(){
+                var input=document.getElementById("myInput").value.trim();
+                if(input === ''){
+                    input = "<b style='color: red'>Nothing was typed. Type here to see result";                
+                }
+                document.getElementById("myid").innerHTML = "You typed: " + input;
+            }
+            
+            let arr=[1,2,3,4,5];
+
+            function addElement(element){
+                arr.push(element);
+                document.writeln(`Added ${element} to the array.<br>`);
+            }
+            
+            function removeElement(element){
+                const idx = arr.indexOf(element);
+                if(idx > -1){
+                    arr.splice(idx,1);
+                    document.writeln(`${element} Removed.<br>`);
+                }
+                else{
+                    document.writeln(`Element not found in array.<br>`);
+                }
+            }
+
+            function display(){
+                document.writeln(`Current Array is: `+arr+`.<br>`);
+            }
+
+            addElement(6);
+            addElement(7);
+            addElement(8);
+            addElement(9);
+            addElement(10);
+            display();
+            removeElement(5);
+            removeElement(1);
+            display();
+            removeElement(11);
+        </script>
+        <h1>This file conatins Object method</h1>
+        <script>
+            const mainObject = {
+                collegeName: "MRECW",
+                location: "Secunderabad",
+                branches: ["CSE","AIML","DS","CIVIL","MECH"],
+                sec: ["A","B","C","D"],
+                year: 2008,
+                greet: function(){
+                    console.log(`Hello from ${this.collegeName}`);
+                    document.writeln(`Welcome to ${this.collegeName} located in ${this.location}<br>`);
+                },
+
+                showbranch: function(){
+                    document.writeln(`Branches available are: ${this.branches.join(", ")}<br>`);
+                    document.writeln(`Sections are: ${this.sec.join(", ")}<br>`);
+                },
+
+                yr: function(){
+                    document.writeln(`Established in ${this.year}<br>`);
+                }
+            };
+            mainObject.greet();
+            mainObject.showbranch();
+            mainObject.yr();
+
+            const newObject = {
+                collegeName: "MRECW",
+                location: "Secunderabad",
+                branches: ["CSE","AIML","DS","CIVIL","MECH"],
+                sec: ["A","B","C","D"],
+                year: 2008};
+                function greet(){
+                    console.log(`Hello from ${this.collegeName}`);
+                    document.writeln(`Welcome to ${this.collegeName} located in ${this.location}<br>`);
+                };
+
+                function showbranch(){
+                    document.writeln(`Branches available are: ${this.branches.join(", ")}<br>`);
+                    document.writeln(`Sections are: ${this.sec.join(", ")}<br>`);
+                };
+
+                function yr(){
+                    document.writeln(`Established in ${this.year}<br>`);
+                };
+
+            newObject.greet();
+            newObject.showbranch();
+            newObject.yr();
+        </script>
+        <h1>This file contains DOM fumctions: receiving object values and storing the values</h1>
+        <div id="DID"></div>
+        <p class="PID"></p>
+        <p class="PID"></p>
+        <p class="PID"></p>
+        <p class="PID"></p>
+        <script>
+            document.getElementById("DID").innerHTML="This is div element with ID DID.<br> ";
+            document.getElementsByClassName("PID")[0].innerHTML="This is paragraph element with Classname:p.<br>";
+            document.getElementsByTagName("p")[2].innerHTML="This is paragraph element tags.<br>";
+        </script>
+    </boby>
+</head>
